@@ -59,7 +59,7 @@ const Itempage = ({isLoggedIn}) => {
           <div className=" text-[15px] mt-[20px] font-bold" >
             Description
             <div className="text-[13px] font-normal text-gray-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, accusantium autem ut in optio labore debitis at voluptatum ipsa! Delectus, mollitia deserunt eaque eius sequi quaerat voluptas eum enim numquam excepturi commodi, aliquam facere necessitatibus quisquam aperiam natus repellendus sint aliquid ad reprehenderit. Dolorum, voluptatibus.
+              {proid.description}
             </div>
             <div onClick={handlebuy} className="hover:opacity-70 cursor-pointer mt-[50px] bg-[#1fab03] text-white rounded-[15px] h-[30px] flex items-center justify-center"> 
               Buy Now
