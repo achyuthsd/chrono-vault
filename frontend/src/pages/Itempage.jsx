@@ -24,7 +24,7 @@ const Itempage = ({isLoggedIn}) => {
 
   const fetchId = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/products/${id}`);
+      const res = await axios.get(`/api/products/${id}`);
       setproid(res.data);
       console.log(res.data.name);
       setload(true);
