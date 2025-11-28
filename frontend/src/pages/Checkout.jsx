@@ -23,7 +23,7 @@ else if(isNaN(phno)){toast.info('Pls enter a valid Phone number')}
 else{
 
   try {
-     const res = await axios.post(`http://localhost:5000/api/order`,{
+     const res = await axios.post(`/api/order`,{
       userid:localStorage.getItem("userid"),
       name,
       email,
