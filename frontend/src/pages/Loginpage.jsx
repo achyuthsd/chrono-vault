@@ -22,7 +22,7 @@ let res
     {
       localStorage.clear();
       try {
-       res = await axios.post("http://localhost:5000/api/login", {
+       res = await axios.post("/api/login", {
         email,
         password: pass,
       });
