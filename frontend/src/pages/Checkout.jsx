@@ -34,7 +34,7 @@ else{
      });
     console.log(res.data)
     console.log(localStorage.getItem("userid"))
-    toast.success('Order placed succesffully!')
+    toast.success('Order placed successfully!')
 navigate('/success')
 
   } catch (error) {
