@@ -12,7 +12,7 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Help from './pages/Help.jsx';
 import { useState } from 'react';
-
+import ScrollToTop from "./pages/ScrollTotop.jsx";
 function App() {
   // ✅ React state to track login
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("userid"));
@@ -23,7 +23,7 @@ function App() {
 
       {/* Navbar with login state */}
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/login" element={<Loginpage setIsLoggedIn={setIsLoggedIn} />} />

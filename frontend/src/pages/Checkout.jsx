@@ -23,7 +23,7 @@ else if(isNaN(phno)){toast.info('Pls enter a valid Phone number')}
 else{
 
   try {
-     const res = await axios.post(`/api/order`,{
+     const res = await axios.post(`https://chrono-vault.onrender.com/api/order`,{
       userid:localStorage.getItem("userid"),
       name,
       email,
@@ -49,7 +49,7 @@ navigate('/success')
 
   const fetchId = async () => {
     try {
-      const res = await axios.get(`/api/products/${id}`);
+      const res = await axios.get(`https://chrono-vault.onrender.com/api/products/${id}`);
       setproid(res.data);
       console.log(res.data.name);
       setload(true);
@@ -72,7 +72,7 @@ navigate('/success')
       
       {
         load ? (
- <div className="flex o:flex-col o:pr-[5px]">
+ <div className="flex o:flex-col o:pr-[5px] w-[100vw]">
         <div className=" h-[100vh] w-1/2 p-[40px] border-r-[2px] o:w-full o:border-none o:h-[50vh] o:p-[15px]">
           <div className="text-[30px] mb-[40px]">Order Details &gt;</div>
           <div className="text-[14px]">
@@ -117,7 +117,9 @@ navigate('/success')
         </div>
         </div>
       </div>
-        ):(<div>load</div>)
+        ):(<div className="flex justify-center items-center h-[100vh]">
+          <div className="loader"></div>
+        </div>)
       }
      
     </div>

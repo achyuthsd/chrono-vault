@@ -24,7 +24,7 @@ else
       localStorage.clear()
     try {
       // Make sure your signup API endpoint is correct here
-      const res = await axios.post("/api/register", {
+      const res = await axios.post("https://chrono-vault.onrender.com/api/register", {
         email,
         password: pass,
       });

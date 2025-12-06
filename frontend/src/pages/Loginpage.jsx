@@ -22,7 +22,7 @@ let res
     {
       localStorage.clear();
       try {
-       res = await axios.post("/api/login", {
+       res = await axios.post("https://chrono-vault.onrender.com/api/login", {
         email,
         password: pass,
       });

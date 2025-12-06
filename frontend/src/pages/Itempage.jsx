@@ -24,7 +24,7 @@ const Itempage = ({isLoggedIn}) => {
 
   const fetchId = async () => {
     try {
-      const res = await axios.get(`/api/products/${id}`);
+      const res = await axios.get(`https://chrono-vault.onrender.com/api/products/${id}`);
       setproid(res.data);
       console.log(res.data.name);
       setload(true);
@@ -41,7 +41,7 @@ const Itempage = ({isLoggedIn}) => {
     <div>
       
       {load ? (
-        <div className="pl-[100px] pr-[100px] pt-[50px] flex i:flex-col i:pl-[15px] i:pr-[15px] h-[100vh] i:h-[200vh]">
+        <div className="pl-[100px] pr-[100px] pt-[50px] flex i:flex-col i:pl-[15px] i:pr-[15px] h-[100vh] i:h-[255vw]">
           <div className=" w-1/3 i:w-full flex items-center i:mb-[100px]">
             <img src={proid.image} alt={proid.name} className="w-[500px]" />
           </div>
@@ -72,7 +72,9 @@ const Itempage = ({isLoggedIn}) => {
          
         </div>
       ) : (
-        <div>Loading...</div>
+        <div className="flex justify-center items-center h-[100vh]">
+          <div className="loader"></div>
+        </div>
       )}
     </div>
   );
