@@ -41,7 +41,7 @@ const Itempage = ({isLoggedIn}) => {
     <div>
       
       {load ? (
-        <div className="pl-[100px] pr-[100px] pt-[50px] flex i:flex-col i:pl-[15px] i:pr-[15px] h-[100vh] i:h-[255vw]">
+        <div className="pl-[100px] pr-[100px] pt-[50px] flex i:flex-col i:pl-[15px] i:pr-[15px] h-[100vh] i:h-[290vw]">
           <div className=" w-1/3 i:w-full flex items-center i:mb-[100px]">
             <img src={proid.image} alt={proid.name} className="w-[500px]" />
           </div>
